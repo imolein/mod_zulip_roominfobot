@@ -10,8 +10,8 @@ This picture is from the Zulip server of the company where I work. The texts in 
 
 ## Running with
 
-* Prosody 0.10 (Default for Jitsi Meet stable): **Yes**
-* Prosody 0.11: **Should**
+* Prosody 0.10: **Yes**
+* Prosody 0.11: **Yes**
 
 ## Installation
 
