@@ -45,9 +45,7 @@ end
 local function get_jitsi_nick_from_occupant(occupant)
   local stanza = get_session(occupant)
 
-  return stanza
-    :get_child('nick', 'http://jabber.org/protocol/nick')
-    :get_text()
+  return stanza:get_child_text('nick', 'http://jabber.org/protocol/nick')
 end
 
 --- returns the room object for the given room name
