@@ -52,6 +52,7 @@ end
 -- @param string room_name
 local function get_room_from_room_name(room_name)
   for room in each_room() do
+    local name = tostring(room:get_name()) or (room.jid and room.jid:match('^(.-)@.*$'))
     if room:get_name() == room_name then
       return room
     end

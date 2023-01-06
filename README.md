@@ -12,6 +12,7 @@ This picture is from the Zulip server of the company where I work. The texts in 
 
 * Prosody 0.10: **Yes**
 * Prosody 0.11: **Yes**
+* Prosody 0.12: **Yes**
 
 ## Installation
 

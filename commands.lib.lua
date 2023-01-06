@@ -22,7 +22,7 @@ function commands.list_meetings()
 
   for room in ut.each_room() do
     local count = it.count(ut.each_occupant(room))
-    local room_name = tostring(room:get_name())
+    local room_name = tostring(room:get_name()) or (room.jid and room.jid:match('^(.-)@.*$'))
     table.insert(room_list, meetings_line_format:format(room_name, room_name, count))
   end
 
@@ -73,7 +73,7 @@ function commands.meetings()
       table.insert(parti_list, meetings_parti_line_format:format(nick and nick:find('%S') and nick or 'Fellow Jitster'))
     end
 
-    local room_name = tostring(room:get_name())
+    local room_name = tostring(room:get_name()) or (room.jid and room.jid:match('^(.-)@.*$'))
     table.insert(room_list, meetings_line_format:format(room_name, room_name, parti_count))
     table.insert(room_list, table.concat(parti_list, '\n'))
   end
